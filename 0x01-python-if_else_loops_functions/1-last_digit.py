@@ -16,4 +16,4 @@ elif number > 0:
     else:
         print(f"Last digit of {number} is {mod} and is 0")
 else:
-    print(f"Last digit of {number} is 0")
+    print(f"Last digit of {number} is 0 and is 0")
