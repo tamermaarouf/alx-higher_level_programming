@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def multiple_returns(sentence):
     if len(sentence) < 1:
-        return None
+        return (0, None)
     new_tuble = ()
     count = 0
     for ch in sentence:
