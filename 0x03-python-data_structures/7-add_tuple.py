@@ -2,8 +2,8 @@
 def add_tuple(tuple_a=(), tuple_b=()):
     ta = reset(tuple_a)
     tb = reset(tuple_b)
-    
     return (ta[0] + tb[0], ta[1] + tb[1])
+
 
 def reset(tple=()):
     if len(tple) == 0:
