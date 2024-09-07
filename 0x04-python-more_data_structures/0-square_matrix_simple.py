@@ -7,4 +7,3 @@ def square_matrix_simple(matrix=[]):
             mul_matrix.append(matrix[i][x] * matrix[i][x])
         new_matrix.append(mul_matrix)
     return (new_matrix)
-
