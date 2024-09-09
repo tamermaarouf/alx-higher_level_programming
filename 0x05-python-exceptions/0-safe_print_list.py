@@ -7,7 +7,6 @@ def safe_print_list(my_list=[], x=0):
                 print('f'.format(my_list[elem]))
             else:
                 print('{}'.format(my_list[elem]), end='')
-                #raise IndexError
             count += 1
         print()
         return (count)
