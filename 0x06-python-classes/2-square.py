@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#!/usr/bin/pythoin3
 '''Write a class Square that defines a square '''
 
 
@@ -9,10 +9,8 @@ class Square():
         try:
             if size > 0:
                 self.__size = size
-            elif size < 0:
-                raise ValueError
             else:
-                raise TypeError
+                raise ValueError
         except ValueError:
             print("Size must be >= 0")
         except TypeError:
