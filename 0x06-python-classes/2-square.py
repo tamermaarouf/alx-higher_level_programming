@@ -7,10 +7,12 @@ class Square():
     def __init__(self, size=0):
         ''' Private instance attr: size '''
         try:
-            if size > 0:
+            if size >= 0:
                 self.__size = size
-            else:
+            elif size < 0:
                 raise ValueError
+            else:
+                raise TypeError
         except ValueError:
             print("Size must be >= 0")
         except TypeError:
