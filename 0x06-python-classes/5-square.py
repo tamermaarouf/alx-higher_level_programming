@@ -27,9 +27,13 @@ class Square:
     def area(self):
         return (self.__size ** 2)
 
-    '''Public instance method: def my_print(self): that prints in stdout the square with the character #: '''
+    '''Public instance method: def my_print(self):
+    that prints in stdout the square with the character #: '''
     def my_print(self):
-        for row in range(self.__size):
-            for col in range(self.__size):
-                print('{}'.format('#'), end='')
-            print('')
+        if self__size > 0:
+            for row in range(self.__size):
+                for col in range(self.__size):
+                    print('{}'.format('#'), end='')
+                print('')
+        else:
+            print(' ')
