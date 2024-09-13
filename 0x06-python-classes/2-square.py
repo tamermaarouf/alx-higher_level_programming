@@ -2,7 +2,7 @@
 '''Write a class Square that defines a square '''
 
 
-class Square():
+class Square:
     ''' Instantiation with optional size: def __init__(self, size=0) '''
     def __init__(self, size=0):
         ''' Private instance attr: size '''
