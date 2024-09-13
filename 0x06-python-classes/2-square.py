@@ -6,6 +6,7 @@ class Square():
     ''' Instantiation with optional size: def __init__(self, size=0) '''
     def __init__(self, size=0):
         ''' Private instance attr: size '''
+        self.__size = size
         if (isinstance(size, int)):
             if size >= 0:
                 self.__size = size
