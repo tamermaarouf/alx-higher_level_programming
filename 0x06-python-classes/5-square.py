@@ -36,4 +36,4 @@ class Square:
                     print('{}'.format('#'), end='')
                 print('')
         else:
-            print(' ')
+            print('')
