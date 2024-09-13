@@ -30,7 +30,7 @@ class Square:
     '''Public instance method: def my_print(self):
     that prints in stdout the square with the character #: '''
     def my_print(self):
-        if self__size > 0:
+        if self.__size > 0:
             for row in range(self.__size):
                 for col in range(self.__size):
                     print('{}'.format('#'), end='')
