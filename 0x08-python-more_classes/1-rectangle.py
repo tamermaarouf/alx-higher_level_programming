@@ -30,6 +30,7 @@ class Rectangle():
         return (self.__height)
 
     '''property setter def height(self, value): to set it: '''
+    @height.setter
     def height(self, value):
         if(isinstance(value, int)):
             if value >= 0:
