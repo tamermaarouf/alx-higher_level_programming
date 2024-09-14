@@ -6,8 +6,8 @@ class Rectangle():
     '''Instantiation with optional width and height: __init__'''
     def __init__(self, width=0, height=0):
         '''method is executed immediately after create an object'''
-        self.__height = height
-        self.__width = width
+        self.height = height
+        self.width = width
 
     '''property width to retrieve it'''
     @property
