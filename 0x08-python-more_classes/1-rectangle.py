@@ -2,7 +2,7 @@
 '''class Rectangle that defines a rectangle by'''
 
 
-class Rectangle():
+class Rectangle:
     '''Instantiation with optional width and height: __init__'''
     def __init__(self, width=0, height=0):
         '''method is executed immediately after create an object'''
