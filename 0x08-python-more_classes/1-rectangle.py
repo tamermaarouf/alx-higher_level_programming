@@ -3,7 +3,7 @@
 
 
 class Rectangle:
-    """ Instantiation with optional width and height """
+    """ Empty class Rectangle that defines a rectangle """
     def __init__(self, width=0, height=0):
         """ method is executed immediately after create an object """
         self.height = height
