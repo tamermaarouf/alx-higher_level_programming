@@ -5,17 +5,20 @@
 class Rectangle():
     '''Instantiation with optional width and height: __init__'''
     def __init__(self, width=0, height=0):
+        '''method is executed immediately after create an object'''
         self.__width = width
         self.__height = height
 
-    '''property def width(self): to retrieve it'''
+    '''property width to retrieve it'''
     @property
     def width(self):
+        '''Getter'''
         return (self.__width)
 
-    '''property setter def width(self, value): to set it: '''
+    '''property setter width to set it: '''
     @width.setter
     def width(self, value):
+        '''Setter'''
         if (isinstance(value, int)):
             if value >= 0:
                 self.__width = value
@@ -24,14 +27,16 @@ class Rectangle():
         else:
             raise TypeError("width must be an integer")
 
-    '''property def height(self): to retrieve it'''
+    '''property height: to retrieve it'''
     @property
     def height(self):
+        '''Getter'''
         return (self.__height)
 
-    '''property setter def height(self, value): to set it: '''
+    '''property setter height to set it: '''
     @height.setter
     def height(self, value):
+        '''setter'''
         if(isinstance(value, int)):
             if value >= 0:
                 self.__height = value
