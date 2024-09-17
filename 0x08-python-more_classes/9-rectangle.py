@@ -54,6 +54,19 @@ class Rectangle:
         else:
             return ((self.__width + self.__height) * 2)
 
+    @classmethod
+    def square(cls, size=0):
+        """Returns a new rectangle instance with width == height == size.
+
+        Args:
+            cls: used to access class attributes.
+            size (int, optional): size of rectangle (1 side). Defaults to 0.
+
+        Returns:
+            Square: the new rectangle with equal values of height and width .
+        """
+        return Rectangle(size, size)
+
     def __str__(self):
         if self.__width == 0 or self.__height == 0:
             return ''
@@ -83,8 +96,3 @@ class Rectangle:
             return rect_1
         else:
             return rect_2
-
-    @classmethod
-    def square(cls, size=0):
-        """ returns a new rectangle instance """
-        return Rectangle(size, size)
