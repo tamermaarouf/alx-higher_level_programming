@@ -21,8 +21,7 @@ def matrix_divided(matrix=None, div=0):
 
     message = "matrix must be a matrix (list of lists) of integers/floats"
     if (not isinstance(matrix, list)) | (not matrix):
-        raise TypeError(
-                "matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'")
+        raise TypeError(message)
     if not matrix:
         raise TypeError(message)
     for row in matrix:
