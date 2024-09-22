@@ -2,7 +2,7 @@
 ''' Write a function that divides all elements of a matrix. '''
 
 
-def matrix_divided(matrix, div):
+def matrix_divided(matrix=None, div=0):
     """Divides all elements of a matrix.
 
     Args:
@@ -20,11 +20,13 @@ def matrix_divided(matrix, div):
     """
 
     message = "matrix must be a matrix (list of lists) of integers/floats"
-    if not matrix[0] or len(matrix) == 0:
-        raise TypeError(message)
-    if not isinstance(matrix, list):
+    if (not isinstance(matrix, list)) | (not matrix):
+        raise TypeError("matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'")
+    if not matrix:
         raise TypeError(message)
     for row in matrix:
+        if len(row) == 0:
+            raise TypeError(message)
         if not isinstance(row, list):
             raise TypeError(message)
         for col in row:
