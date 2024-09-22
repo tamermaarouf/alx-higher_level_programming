@@ -3,15 +3,21 @@
 
 
 def matrix_divided(matrix, div):
-    for row in matrix:
-        if len(row) == len(matrix[0]):
-            pass
-        else:
-            raise TypeError("Each row of the matrix must have the same size")
-    if not (all([isinstance(col, int) for col in row] for row in matrix)):
+    if not matrix:
         raise TypeError(
                 "matrix must be a matrix (list of lists) of integers/floats")
-    elif not (isinstance(div, int)):
+    if not isinstance(matrix, list):
+        raise TypeError(
+                "matrix must be a matrix (list of lists) of integers/floats")
+    for row in matrix:
+        if not isinstance(row, list) || len(row) == 0:
+            raise TypeError(
+                    "matrix must be a matrix (list of lists) of integers/floats")
+        for col in row:
+            if type(col) not in [int, float]:
+                raise TypeError(
+                        "matrix must be a matrix (list of lists) of integers/floats")
+    if type(div) not in [int, float]:
         raise TypeError("div must be a number")
     elif div == 0:
         raise ZeroDivisionError("division by zero")
