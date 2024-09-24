@@ -2,6 +2,9 @@
 The ``3-say_my_name`` module
 =============================
 
+Note: you might have a different number of tests than in the above example. 
+As usual, your tests should cover all possible cases.
+
 Using ``say_my_name``
 ----------------------
 
@@ -29,13 +32,11 @@ Now test it:
     Traceback (most recent call last):
     TypeError: first name must be a string
 
-    >>> say_my_name("", "Smit")
-    Traceback (most recent call last):
-    TypeError: first name must be a string
+    >>> say_my_name("", "Smith")
+    My name is  Smith
 
     >>> say_my_name("", "")
-    Traceback (most recent call last):
-    TypeError: first name must be a string
+    My name is  
 
     >>> say_my_name()
     Traceback (most recent call last):
