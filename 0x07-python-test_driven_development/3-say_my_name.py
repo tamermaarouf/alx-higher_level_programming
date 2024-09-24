@@ -1,12 +1,9 @@
 #!/usr/bin/python3
+'''Write a function that prints My name is <first name> <last name>'''
 
 
 def say_my_name(first_name, last_name=""):
-    '''This function prints name (<first name> <last name>)
-    Args:
-    first_name (str): The fisrt name to be printed
-    last_name (str): The last name to be printed
-    Raises:
+    '''This function prints name (<first name> <last name>
     TypeError: If either the first_name and last_name are not strings'''
     if not isinstance(first_name, str):
         raise TypeError("first name must be a string")
