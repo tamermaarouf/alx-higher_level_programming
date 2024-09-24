@@ -1,0 +1,44 @@
+=============================
+The ``4-print_square`` module
+=============================
+
+Note: you might have a different number of tests than in the above example. 
+As usual, your tests should cover all possible cases.
+
+Using ``print_square``
+----------------------
+
+Import the function:
+
+    >>> print_square = __import__('4-print_square').print_square
+
+Now test it:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+    >>> print_square(10)
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+    ##########
+
+    >>> print_square(0)
+
+    >>> print_square(-2)
+    Traceback (most recent call last):
+    ValueError: size must be >= 0
+
+    >>> print_square(2.8)
+    TypeError: size must be an integer
+
+    >>> print_square('John')
+    TypeError: size must be an integer
