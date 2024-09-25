@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Write a class MyList that inherits from list:'''
 
+
 class MyList(list):
     def __init__(self):
         self.__new_list = []
