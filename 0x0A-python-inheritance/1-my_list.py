@@ -10,7 +10,7 @@ class MyList(list):
         super().append(self._validate_number(item))
 
     def print_sorted(self):
-        self.__new_list = self.copy()
+        self.__new_list = super().copy()
         self.__new_list.sort()
         print(self.__new_list)
 
