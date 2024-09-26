@@ -48,7 +48,7 @@ integer_validator method called via class with no args:
     >>> bg.__class__.integer_validator()
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry.integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
+    TypeError: integer_validator() missing 3 required positional arguments: 'self', 'name', and 'value'
 
 integer_validator method arg test (0 args):
     >>> bg.integer_validator()
