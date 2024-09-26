@@ -23,13 +23,13 @@ area method called via class with no args:
     >>> bg.__class__.area()
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry.area() missing 1 required positional argument: 'self'
+    TypeError: area() missing 1 required positional argument: 'self'
 
 area method args test (1 arg):
     >>> bg.area(10)
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry.area() takes 1 positional argument but 2 were given
+    TypeError: area() takes 1 positional argument but 2 were given
 
 area method normal test:
     >>> bg.area()
@@ -54,13 +54,13 @@ integer_validator method arg test (0 args):
     >>> bg.integer_validator()
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry.integer_validator() missing 2 required positional arguments: 'name' and 'value'
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
     
 integer_validator method arg test (3 args):
     >>> bg.integer_validator(1, 1, 1)
     Traceback (most recent call last):
     ...
-    TypeError: BaseGeometry.integer_validator() takes 3 positional arguments but 4 were given
+    TypeError: integer_validator() takes 3 positional arguments but 4 were given
 
 integer_validator method float.0 value:
     >>> bg.integer_validator("foo", 3.0)
