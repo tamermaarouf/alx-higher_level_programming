@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-'''Write a function that returns True if the object is exactly an
-instance of the specified class ; otherwise False.'''
+'''Module for is_same_class method.'''
 
 
 def is_same_class(obj, a_class):
+    '''Determines if an object is exactly an instance of a class.'''
     return (type(obj) == a_class)
