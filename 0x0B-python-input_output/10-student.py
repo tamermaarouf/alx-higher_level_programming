@@ -9,11 +9,14 @@ class Student:
         self.last_name = last_name
         self.age = age
 
+    '''If attrs is a list of strings,
+    only attribute names contained in this list must be retrieved.
+    Otherwise, all attributes must be retrieved
+    '''
+
     def to_json(self, attrs=None):
-        '''all attributes must be retrieved'''
         if attrs is None:
             return self.__dict__
-        '''this list must be retrieved.'''
         else:
             my_dict = {}
             for key, value in self.__dict__.items():
