@@ -60,4 +60,3 @@
 
 ## Install semi-standard
 * sudo npm install semistandard --global
-
