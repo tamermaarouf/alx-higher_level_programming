@@ -4,7 +4,7 @@
 const { argv } = require('node:process');
 let num = 'Not a number';
 argv.forEach((val, index) => {
-  if ((index === 2) && (!isNaN(val))) { num = parseInt(val); }
+  if ((index === 2) && (!isNaN(val))) { num = `My number: parseInt(${val})`; }
 });
-const message = `My number: ${num}`;
+const message = num;
 console.log(message);
