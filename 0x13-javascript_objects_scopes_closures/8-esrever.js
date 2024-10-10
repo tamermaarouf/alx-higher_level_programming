@@ -7,6 +7,7 @@
 exports.esrever = function (list) {
   const newArray = [];
   let count = 0;
+  // eslint-disable-next-line no-unused-vars
   for (const elem of list) {
     count++;
   }
