@@ -12,10 +12,10 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         '''constractor'''
         super().__init__(id)
-        self._width = width
-        self._height = height
-        self._x = x
-        self._y = y
+        self.__width = width
+        self.__height = height
+        self.__x = x
+        self.__y = y
 
     @property
     def width(self):
@@ -52,7 +52,7 @@ class Rectangle(Base):
         '''Getter'''
         return self.__y
 
-    @property
+    @y.setter
     def y(self, value):
         '''Setter'''
         self.__y = value
