@@ -22,6 +22,7 @@ class Base():
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
+    '''
     def integer_validator(self, name, value, eq):
         '''Method for validating the value.'''
         if not isinstance(value, int):
@@ -30,3 +31,4 @@ class Base():
             raise ValueError('{} must be >= 0'.format(name))
         if ((not eq) and (value < 0)):
             raise ValueError('{} must be > 0'.format(name))
+    '''
