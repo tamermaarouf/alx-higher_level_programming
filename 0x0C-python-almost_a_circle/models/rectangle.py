@@ -72,12 +72,24 @@ class Rectangle(Base):
               end='')
 
     def update(self, *args):
-         '''that assigns an argument to each attribute:'''
-         match args:
-             case 0:
-                 super().__init__(args[0])
-             case 1:
-                 self.__width = args[1]
+        '''that assigns an argument to each attribute:'''
+        for arg in range(len(args)):
+            match arg:
+                case 0:
+                    super().__init__(args[0])
+                    continue
+                case 1:
+                    self.width = args[1]
+                    continue
+                case 2:
+                    self.height = args[2]
+                    continue
+                case 3:
+                    self.x = args[3]
+                    continue
+                case 4:
+                    self.y = args[4]
+                    break
 
     def integer_validator(self, name, value, eq):
         '''Method for validating the value.'''
