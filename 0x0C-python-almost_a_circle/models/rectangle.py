@@ -76,7 +76,6 @@ class Rectangle(Base):
         Args:
             *args (tuple): arguments.
             **kwargs (dict): double pointer to a dictionary.
-        '''
         for num in range(len(args)):
             match num:
                 case 1:
@@ -92,7 +91,11 @@ class Rectangle(Base):
                     self.y = args[num]
                     break
                 case _:
-                    self.id = args[0]
+                self.id = args[0]
+        '''
+        argList = ['id', 'width', 'height', 'x', 'y']
+        for num in range(len(args)):
+            setattr(self, argList[num], args[num])
 
     def integer_validator(self, name, value, eq):
         '''Method for validating the value.'''
