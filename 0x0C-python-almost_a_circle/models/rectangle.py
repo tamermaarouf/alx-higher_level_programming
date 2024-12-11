@@ -11,13 +11,13 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''constractor'''
-        self.integer_validator('width', width)
+        self.integer_validator('width', width, False)
         self.__width = width
-        self.integer_validator('height', height)
+        self.integer_validator('height', height, False)
         self.__height = height
-        self.integer_validator('x', x)
+        self.integer_validator('x', x, True)
         self.__x = x
-        self.integer_validator('y', y)
+        self.integer_validator('y', y, True)
         self.__y = y
         super().__init__(id)
 
@@ -29,10 +29,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, valueWidth):
         '''Setter'''
-        if not isinstance(valueWidth, int):
-            raise TypeError('width must be an integer')
-        if valueWidth < 0:
-            raise ValueError('width must be > 0')
+        self.integer_validator('width', valueWidth, False)
         self.__width = valueWidth
 
     @property
@@ -43,10 +40,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, valueH):
         '''Setter'''
-        if not isinstance(valueH, int):
-            raise TypeError('height must be an integer')
-        if valueH < 0:
-            raise ValueError('height must be > 0')
+        self.integer_validator('height', valueH, False)
         self.__height = valueH
 
     @property
@@ -57,13 +51,8 @@ class Rectangle(Base):
     @x.setter
     def x(self, valueX):
         '''Setter'''
-        if (isinstance(valueX, int)):
-            if (valueX >= 0):
-                self.__x = valueX
-            else:
-                raise ValueError('x must be >= 0')
-        else:
-            raise TypeError('x must be an integer')
+        self.integer_validator('x', valueX, True)
+        self.__x = valueX
 
     @property
     def y(self):
@@ -73,13 +62,8 @@ class Rectangle(Base):
     @y.setter
     def y(self, valueY):
         '''Setter'''
-        if (isinstance(valueY, int)):
-            if (valueY >= 0):
-                self.__y = valueY
-            else:
-                raise ValueError('y must be >= 0')
-        else:
-            raise TypeError('y must be an integer')
+        self.integer_validator('y', valueY, True)
+        self.__y = valueY
 
     def area(self):
         return (self.__width * self.__height)
