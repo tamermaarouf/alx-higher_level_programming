@@ -80,3 +80,8 @@ class Rectangle(Base):
             raise ValueError('{} must be >= 0'.format(name))
         if ((not eq) and (value <= 0)):
             raise ValueError('{} must be > 0'.format(name))
+
+    def __str__(self):
+        '''returns [Rectangle] (<id>) <x>/<y> - <width>/<height>'''
+        return ('[Rectangle] ({}) {}/{} - {}/{}'.format(
+            self.id, self.__x, self.__y, self.__width, self.__height))
