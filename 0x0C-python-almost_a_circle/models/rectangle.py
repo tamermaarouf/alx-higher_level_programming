@@ -11,11 +11,15 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''constractor'''
-        super().__init__(id)
+        self.integer_validator('width', width)
         self.__width = width
+        self.integer_validator('height', height)
         self.__height = height
+        self.integer_validator('x', x)
         self.__x = x
+        self.integer_validator('y', y)
         self.__y = y
+        super().__init__(id)
 
     @property
     def width(self):
@@ -25,13 +29,11 @@ class Rectangle(Base):
     @width.setter
     def width(self, valueWidth):
         '''Setter'''
-        if (isinstance(valueWidth, int)):
-            if (valueWidth > 0):
-                self.__width = valueWidth
-            else:
-                raise ValueError('width must be > 0')
-        else:
+        if not isinstance(valueWidth, int):
             raise TypeError('width must be an integer')
+        if valueWidth < 0:
+            raise ValueError('width must be > 0')
+        self.__width = valueWidth
 
     @property
     def height(self):
@@ -41,13 +43,11 @@ class Rectangle(Base):
     @height.setter
     def height(self, valueH):
         '''Setter'''
-        if (isinstance(valueH, int)):
-            if (valueH > 0):
-                self.__height = valueH
-            else:
-                raise ValueError('height must be > 0')
-        else:
+        if not isinstance(valueH, int):
             raise TypeError('height must be an integer')
+        if valueH < 0:
+            raise ValueError('height must be > 0')
+        self.__height = valueH
 
     @property
     def x(self):
