@@ -76,19 +76,20 @@ class Rectangle(Base):
         for num in range(len(args)):
             match num:
                 case 0:
+                    print(args[num])
                     self.id = args[num]
                     continue
                 case 1:
-                    self.__width = args[num]
+                    self.width = args[num]
                     continue
                 case 2:
-                    self.__height = args[num]
+                    self.height = args[num]
                     continue
                 case 3:
-                    self.__x = args[num]
+                    self.x = args[num]
                     continue
                 case 4:
-                    self.__y = args[num]
+                    self.y = args[num]
                     break
 
     def integer_validator(self, name, value, eq):
