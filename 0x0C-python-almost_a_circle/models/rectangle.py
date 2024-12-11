@@ -72,7 +72,11 @@ class Rectangle(Base):
               end='')
 
     def update(self, *args):
-        '''that assigns an argument to each attribute:'''
+        '''that assigns an argument to each attribute:
+        Args:
+            *args (tuple): arguments.
+            **kwargs (dict): double pointer to a dictionary.
+        '''
         for num in range(len(args)):
             match num:
                 case 1:
