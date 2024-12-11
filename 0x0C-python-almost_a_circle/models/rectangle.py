@@ -11,14 +11,10 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''constractor'''
-        self.integer_validator('width', width, False)
-        self.__width = width
-        self.integer_validator('height', height, False)
-        self.__height = height
-        self.integer_validator('x', x, True)
-        self.__x = x
-        self.integer_validator('y', y, True)
-        self.__y = y
+        self.width = width
+        self.height = height
+        self.x = x
+        self.y = y
         super().__init__(id)
 
     @property
