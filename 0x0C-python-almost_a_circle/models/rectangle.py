@@ -75,10 +75,6 @@ class Rectangle(Base):
         '''that assigns an argument to each attribute:'''
         for num in range(len(args)):
             match num:
-                case 0:
-                    print(args[num])
-                    self.id = args[num]
-                    continue
                 case 1:
                     self.width = args[num]
                     continue
@@ -91,6 +87,8 @@ class Rectangle(Base):
                 case 4:
                     self.y = args[num]
                     break
+                case _:
+                    self.id = args[0]
 
     def integer_validator(self, name, value, eq):
         '''Method for validating the value.'''
