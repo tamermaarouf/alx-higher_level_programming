@@ -19,7 +19,7 @@ class Rectangle(Base):
         self.__x = x
         # super().integer_validator('y', y, True)
         self.__y = y
-        # super().__init__(id)
+        super().__init__(id)
 
     @property
     def width(self):
