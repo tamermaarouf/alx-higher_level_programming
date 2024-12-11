@@ -11,9 +11,13 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''constractor'''
+        super().integer_validator('width', width, False)
         self.width = width
+        super().integer_validator('height', height, False)
         self.height = height
+        super().integer_validator('x', x, True)
         self.x = x
+        super().integer_validator('y', y, True)
         self.y = y
         super().__init__(id)
 
@@ -25,7 +29,7 @@ class Rectangle(Base):
     @width.setter
     def width(self, valueWidth):
         '''Setter'''
-        self.integer_validator('width', valueWidth, False)
+        super().integer_validator('width', valueWidth, False)
         self.__width = valueWidth
 
     @property
@@ -36,7 +40,7 @@ class Rectangle(Base):
     @height.setter
     def height(self, valueH):
         '''Setter'''
-        self.integer_validator('height', valueH, False)
+        super().integer_validator('height', valueH, False)
         self.__height = valueH
 
     @property
@@ -47,7 +51,7 @@ class Rectangle(Base):
     @x.setter
     def x(self, valueX):
         '''Setter'''
-        self.integer_validator('x', valueX, True)
+        super().integer_validator('x', valueX, True)
         self.__x = valueX
 
     @property
@@ -58,7 +62,7 @@ class Rectangle(Base):
     @y.setter
     def y(self, valueY):
         '''Setter'''
-        self.integer_validator('y', valueY, True)
+        super().integer_validator('y', valueY, True)
         self.__y = valueY
 
     def area(self):
