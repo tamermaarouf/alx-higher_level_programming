@@ -24,7 +24,7 @@ class Base():
 
     '''
     def integer_validator(self, name, value, eq):
-        '''Method for validating the value.'''
+        ''' '''Method for validating the value.''''''
         if not isinstance(value, int):
             raise TypeError('{} must be an integer'.format(name))
         if ((eq) and (value < 0)):
