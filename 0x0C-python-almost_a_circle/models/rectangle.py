@@ -80,3 +80,9 @@ class Rectangle(Base):
                 raise ValueError('y must be >= 0')
         else:
             raise TypeError('y must be an integer')
+
+    def area(self):
+        return (self.__width * self.__height)
+
+    def display(self):
+        print(self.__width, self.__height)
