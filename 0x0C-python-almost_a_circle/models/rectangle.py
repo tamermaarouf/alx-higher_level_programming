@@ -67,10 +67,9 @@ class Rectangle(Base):
 
     def display(self):
         '''prints in stdout the Rectangle instance with the character #'''
-        for h in range(self.__height):
-            for w in range(self.__width):
-                print('#', end='')
-            print()
+        print((('\n' * self.__y) + (
+            (' ' * self.__x) + '#' * self.__width + '\n') * self.__height),
+              end='')
 
     def integer_validator(self, name, value, eq):
         '''Method for validating the value.'''
