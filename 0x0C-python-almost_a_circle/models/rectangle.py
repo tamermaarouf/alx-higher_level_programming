@@ -71,31 +71,19 @@ class Rectangle(Base):
             (' ' * self.__x) + '#' * self.__width + '\n') * self.__height),
               end='')
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         '''that assigns an argument to each attribute:
         Args:
             *args (tuple): arguments.
             **kwargs (dict): double pointer to a dictionary.
-        for num in range(len(args)):
-            match num:
-                case 1:
-                    self.width = args[num]
-                    continue
-                case 2:
-                    self.height = args[num]
-                    continue
-                case 3:
-                    self.x = args[num]
-                    continue
-                case 4:
-                    self.y = args[num]
-                    break
-                case _:
-                self.id = args[0]
         '''
-        argList = ['id', 'width', 'height', 'x', 'y']
-        for num in range(len(args)):
-            setattr(self, argList[num], args[num])
+        if (args is not None) and (len(args) != 0):
+            argList = ['id', 'width', 'height', 'x', 'y']
+            for num in range(len(args)):
+                setattr(self, argList[num], args[num])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def integer_validator(self, name, value, eq):
         '''Method for validating the value.'''
