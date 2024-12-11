@@ -11,15 +11,15 @@ class Rectangle(Base):
 
     def __init__(self, width, height, x=0, y=0, id=None):
         '''constractor'''
-        super().integer_validator('width', width, False)
+        # super().integer_validator('width', width, False)
         self.width = width
-        super().integer_validator('height', height, False)
+        # super().integer_validator('height', height, False)
         self.height = height
-        super().integer_validator('x', x, True)
+        # super().integer_validator('x', x, True)
         self.x = x
-        super().integer_validator('y', y, True)
+        # super().integer_validator('y', y, True)
         self.y = y
-        super().__init__(id)
+        # super().__init__(id)
 
     @property
     def width(self):
