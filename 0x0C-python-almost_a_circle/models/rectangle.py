@@ -12,13 +12,13 @@ class Rectangle(Base):
     def __init__(self, width, height, x=0, y=0, id=None):
         '''constractor'''
         # super().integer_validator('width', width, False)
-        self.width = width
+        self.__width = width
         # super().integer_validator('height', height, False)
-        self.height = height
+        self.__height = height
         # super().integer_validator('x', x, True)
-        self.x = x
+        self.__x = x
         # super().integer_validator('y', y, True)
-        self.y = y
+        self.__y = y
         # super().__init__(id)
 
     @property
