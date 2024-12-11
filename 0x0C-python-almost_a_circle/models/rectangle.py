@@ -89,7 +89,7 @@ class Rectangle(Base):
                     continue
                 case 4:
                     self.y = args[4]
-                    break
+                    continue
 
     def integer_validator(self, name, value, eq):
         '''Method for validating the value.'''
