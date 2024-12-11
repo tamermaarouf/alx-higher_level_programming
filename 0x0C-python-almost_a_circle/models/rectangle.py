@@ -61,6 +61,9 @@ class Rectangle(Base):
         self.integer_validator('y', valueY, True)
         self.__y = valueY
 
+    def area(self):
+        return (self.__width * self.__height)
+
     def integer_validator(self, name, value, eq):
         '''Method for validating the value.'''
         if not isinstance(value, int):
