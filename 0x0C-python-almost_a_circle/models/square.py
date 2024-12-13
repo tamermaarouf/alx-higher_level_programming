@@ -48,3 +48,7 @@ class Square(Rectangle):
                 setattr(self, argList[arg], args[arg])
         else:
             super().update(**kwargs)
+
+    def to_dictionary(self):
+        ''' returns the dictionary representation of a Square:'''
+        return dict(id=self.id, size=self.width, x=self.x, y=self.y)
