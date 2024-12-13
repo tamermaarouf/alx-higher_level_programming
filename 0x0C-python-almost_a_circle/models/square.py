@@ -22,7 +22,7 @@ class Square(Rectangle):
     def __str__(self):
         '''return [Square] (<id>) <x>/<y> - <size>, width or height'''
         return ('[{}] ({}) {}/{} - {}'.format(
-            type(self).__name__, self.id, self.x , self.y , self.width))
+            type(self).__name__, self.id, self.x, self.y, self.width))
 
     @property
     def size(self):
