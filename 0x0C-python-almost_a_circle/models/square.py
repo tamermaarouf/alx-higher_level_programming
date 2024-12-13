@@ -23,3 +23,14 @@ class Square(Rectangle):
         '''return [Square] (<id>) <x>/<y> - <size>, width or height'''
         return ('[{}] ({}) {}/{} - {}'.format(
             type(self).__name__, self.id, self.x, self.y, self.width))
+
+    @property
+    def size(self):
+        '''Getter'''
+        return self.width
+
+    @size.setter
+    def size(self, value):
+        '''Setter'''
+        self.integer_validator('width', value, False)
+        self.width = value
