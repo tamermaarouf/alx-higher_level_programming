@@ -34,3 +34,12 @@ class Square(Rectangle):
         '''Setter'''
         self.integer_validator('width', value, False)
         self.width = value
+
+    def update(self, *args, **kwargs):
+        '''
+        that assigns an argument to each attribute:
+        Args:
+            *args (tuple): arguments.
+            **kwargs (dict): double pointer to a dictionary.
+        '''
+        super().update(*args, **kwargs)
