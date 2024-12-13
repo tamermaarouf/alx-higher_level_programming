@@ -22,7 +22,7 @@ class Square(Rectangle):
     def __str__(self):
         '''return [Square] (<id>) <x>/<y> - <size>, width or height'''
         return ('[{}] ({}) {}/{} - {}'.format(
-            type(self).__name__, self.id, self.x, self.y, self.width))
+            type(self).__name__, self.id, self.x , self.y , self.width))
 
     @property
     def size(self):
@@ -42,4 +42,9 @@ class Square(Rectangle):
             *args (tuple): arguments.
             **kwargs (dict): double pointer to a dictionary.
         '''
-        super().update(*args, **kwargs)
+        argList = ['id', 'width', 'x', 'y']
+        if (args is not None) and (len(args) != 0):
+            for arg in range(len(args)):
+                setattr(self, argList[arg], args[arg])
+        else:
+            super().update(**kwargs)

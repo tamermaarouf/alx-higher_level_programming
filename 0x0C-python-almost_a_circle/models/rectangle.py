@@ -77,8 +77,8 @@ class Rectangle(Base):
             *args (tuple): arguments.
             **kwargs (dict): double pointer to a dictionary.
         '''
+        argList = ['id', 'width', 'height', 'x', 'y']
         if (args is not None) and (len(args) != 0):
-            argList = ['id', 'width', 'height', 'x', 'y']
             for num in range(len(args)):
                 setattr(self, argList[num], args[num])
         else:
