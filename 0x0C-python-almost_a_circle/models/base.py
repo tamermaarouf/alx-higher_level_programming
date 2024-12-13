@@ -2,6 +2,7 @@
 '''
 Write the first class Base:
 '''
+import json
 
 
 class Base():
@@ -22,13 +23,9 @@ class Base():
             Base.__nb_objects += 1
             self.id = Base.__nb_objects
 
-    '''
-    def integer_validator(self, name, value, eq):
-        ''' '''Method for validating the value.''''''
-        if not isinstance(value, int):
-            raise TypeError('{} must be an integer'.format(name))
-        if ((eq) and (value < 0)):
-            raise ValueError('{} must be >= 0'.format(name))
-        if ((not eq) and (value < 0)):
-            raise ValueError('{} must be > 0'.format(name))
-    '''
+    def to_json_string(list_dictionaries):
+        '''returns the JSON string representation of list_dictionaries:'''
+        if list_dictionaries is None or len(list_dictionaries) == 0:
+            return []
+        else:
+            return json.dumps(list_dictionaries)
